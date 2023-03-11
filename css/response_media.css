@@ -628,7 +628,6 @@ header>div>nav>p.close{
     /* height:45vw; */
    }
 
-
    
 
    #box04>div#gallery>p.prev{
@@ -651,7 +650,7 @@ header>div>nav>p.close{
    }
        
    #modal>section>div>figure>img{
-    width: auto;
+    width: 88%;
     height: auto;
 }
 
