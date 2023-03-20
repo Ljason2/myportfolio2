@@ -193,8 +193,8 @@ new Modal('MUSINSA','./images/sassbootstrap2.PNG','2023','html, css, javascript,
 new Modal('미니게임','./images/battlegame2.PNG','2023','html, css, react','https://jason-react-battlegame2-23-01-20.s3.amazonaws.com/index.html','A팀 B팀으로 나누어 5판 게임을 진행해서 총합이 큰 사람이 이기는 미니게임 사이트 입니다.','게임 사이트'),
 new Modal('여행예약','./images/travelreservation2.png','2023','html, css, react','https://jason-react-travel-resevation2-23-02-02.s3.amazonaws.com/index.html','국내 여행으로 서울, 경기도, 경상도, 제주도 추천 여행지를 소개해주고, 여행 티켓을 예약할 수있는 사이트입니다. ','예약 사이트'),
 new Modal('전자마왕','./images/electronicproducts2.PNG','2023','html, css, javascript, jquery, react','https://jason-electronic-products-02-14.s3.amazonaws.com/index.html','다양한 가전제품들을 판매하고 가전렌탈 예약서비스를 통해 고객님들께 합리적인 가격으로 편안한 삶의 질을 보장합니다.','가전제품 쇼핑몰'),
-new Modal('MdoC','./images/mdoc2.PNG','2023','html, css, javascript, jquery, react','https://jason-mdoc-03-05.s3.amazonaws.com/index.html','남성 화장품 전문 브랜드는 엠도씨(MdoC)는 남성들의 라이프 스타일에 맞춰 개발된 스킨케어와 미용성분을 가진 화장품을 제공하고 남성들의 피부고민과 다양한 이벤트를 통해 남성 그루밍에 앞장서고 있습니다.','남성화장품 쇼핑몰'),
-new Modal('NEXT.JS','./images/design6.png','2023','html, css','http://aaa6.com','내용6','next.js')
+new Modal('MdoC','./images/mdoc2.PNG','2023','html, css, javascript, jquery, react','https://jason-mdoc-03-06.s3.amazonaws.com/index.html','남성 화장품 전문 브랜드는 엠도씨(MdoC)는 남성들의 라이프 스타일에 맞춰 개발된 스킨케어와 미용성분을 가진 화장품을 제공하고 남성들의 피부고민과 다양한 이벤트를 통해 남성 그루밍에 앞장서고 있습니다.','남성화장품 쇼핑몰'),
+new Modal('북스리뷰','./images/bookPage.png','2023','html, css, javascript, react, next.js','https://book2-23-03-20.vercel.app/','북스리뷰에서는 최근까지 발간 된 책들의 서평을 읽을 수 있고 베스트셀러, 스테디셀러 등등 종목별 도서를 소개해주며 회원들은 서평을 남길 수 있고, 커뮤니티 게시판에서 소통할 수 있습니다.','서평 사이트')
 ]
 
 
