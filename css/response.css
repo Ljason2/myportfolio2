@@ -535,7 +535,7 @@ display: none;
     top: 0;
     box-sizing: border-box;
     /* background-color: rgba(0, 0, 0, 0.85); */
-    background: url('../images/테두리.jpg') no-repeat center bottom;
+    background: url('../images/outline2.jpg') no-repeat center bottom;
 }
 
 #modal>.close{
