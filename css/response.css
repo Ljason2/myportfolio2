@@ -601,12 +601,13 @@ display: none;
     margin-bottom: 25px;
     padding-bottom: 20px;
     border-bottom: 1px solid #aaa;
+    font-size: 100%;
 }
 
 #modal>section>div>dl>dd a{
-    font-size: 90%;
+    font-size: 100%;
+    word-break: break-all;
 }
-
 
 
 
