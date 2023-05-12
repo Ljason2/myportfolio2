@@ -263,6 +263,7 @@ article>div{
         
 
     #modal>section>div>figure>img{
+        height: 36vh;
     }
     
     
@@ -650,7 +651,7 @@ header>div>nav>p.close{
    }
        
    #modal>section>div>figure>img{
-    width: 88%;
+    width: /* 88% */ 70%;
     height: auto;
 }
 
