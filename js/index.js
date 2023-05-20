@@ -10,12 +10,14 @@ let windowW=$(window).width()
 
 if(1545<=windowW){
     nav()
+    rightgo()
     submenu()
     a()
 }
 // 웹에서 태블릿으로 가는 과정
 else if(980 <= windowW && windowW <1544){
     nav()
+    rightgo()
     submenu()
     a()
 }
@@ -24,12 +26,14 @@ else if(980 <= windowW && windowW <1544){
 // box04 문제 때문에 979가 아니라 973으로 수정함
 else if(580 <=windowW && windowW<973){
     tNav()
+    rightgo()
     gallery()
     a()
 }
 
 // 모바일
 else if(windowW<=579){
+    rightgo()
     tNav()
     gallery()
     a()
@@ -57,6 +61,20 @@ $('nav li>a').on('click',function(e){
     return false;
 })
 }
+
+//  rightgo
+function rightgo(){
+
+    $('#box01>h3 a').on('click',function(e){
+        const goA=$(this).attr('href');
+        const aPos= $(goA).offset().top ;
+        const headerHeight =$('header').innerHeight();
+        $('html,body').animate({scrollTop:aPos - headerHeight},800);
+        return false;
+    })
+    }
+    
+
 // table,mobil nav
 function tNav(){
 

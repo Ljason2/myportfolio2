@@ -111,7 +111,7 @@ article>div{
 
     #box01>h3{
     border: none;
-    margin-left: -314px;
+    margin-left: -300px;
     }
     #box01>h3>span{
         font-size: 56px;
@@ -361,7 +361,7 @@ article>div{
 @media screen and (min-width:580px) and (max-width:693px)
 {
 #box01>h3{
-margin-left: -311.5px;
+margin-left: -300.5px;
 }
 }
 
@@ -455,7 +455,7 @@ header>div>nav>p.close{
 
     #box01>h3{
         border: none;
-        margin-left:-196px;
+        margin-left:-180px;
     }
 
     #box01>h3>span{
