@@ -606,6 +606,17 @@ display: none;
     width: 150px;
 }
 
+
+
+#modal>section>div>dl>dt:nth-child(7){
+    color: rgb(230, 7, 7);
+}
+
+#modal>section>div>dl>dt:nth-child(9){
+    color: rgb(230, 7, 7);
+}
+
+
 #modal>section>div>dl>dd{
     float: left;
     width: 350px;
@@ -618,6 +629,7 @@ display: none;
 #modal>section>div>dl>dd a{
     font-size: 100%;
     word-break: break-all;
+    color: rgb(230, 7, 7);
 }
 
 
