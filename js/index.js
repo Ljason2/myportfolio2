@@ -13,6 +13,7 @@ if(1545<=windowW){
     rightgo()
     submenu()
     a()
+    message()
 }
 // 웹에서 태블릿으로 가는 과정
 else if(980 <= windowW && windowW <1544){
@@ -20,6 +21,7 @@ else if(980 <= windowW && windowW <1544){
     rightgo()
     submenu()
     a()
+    message()
 }
 
 // 태블릿
@@ -29,6 +31,7 @@ else if(580 <=windowW && windowW<973){
     rightgo()
     gallery()
     a()
+    message()
 }
 
 // 모바일
@@ -37,6 +40,7 @@ else if(windowW<=579){
     tNav()
     gallery()
     a()
+    message()
 }
 
 // 공통
@@ -150,7 +154,12 @@ $('#gallery .prev').on('click',function(e){
 }
 
 
-
+function message(){
+    const message=$('#box05 p>input').on('click',function(e){
+        alert('서비스 구현 중입니다')
+        e.preventDefault()
+    })
+}
 
 
 
@@ -164,7 +173,7 @@ const pro=document.querySelector('#modal dl .program');
 const url=document.querySelector('#modal dl .link>a');
 const content=document.querySelector('#modal dl .text');
 const fig=document.querySelector('#modal figcaption');
-const detailText=document.querySelector('modal .detailText');
+const detailText=document.querySelector('#modal .detailText');
 const url2=document.querySelector('#modal dl .detailText>a');
 
 
