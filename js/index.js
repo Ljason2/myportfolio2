@@ -129,30 +129,28 @@ return false;
 
 
 
-function gallery(){
-
-// 준비하기
-const figureW=$('#box04 #all figure').width();
-$('#all figure:last').prependTo('#all')
-$('#all').css('margin-left','-'+figureW+'px')
-
-
-// 이벤트
-$('#gallery .prev').on('click',function(e){
-    $('#all').animate({marginLeft:'-='+figureW+'px'},400,function(){
-        $('#all figure:first').appendTo('#all')
-        $('#all').css('margin-left','-'+figureW+'px')    
-    })
-    })
-    
-    $('#gallery .next').on('click',function(e){
-    $('#all').animate({marginLeft:'+='+figureW+'px'},400,function(){
-        $('#all>figure:last').prependTo('#all')
-        $('#all').css('margin-left','-'+figureW+'px')
-    })
-    })
-}
-
+function gallery() {
+    // 준비하기
+    const figureW = $('#box04 #all figure').width();
+    $('#all figure:last').prependTo('#all');
+    $('#all').css('margin-left', '-' + figureW + 'px');
+  
+    // 이벤트
+    $('#gallery .prev').on('click', function (e) {
+      $('#all').animate({ marginLeft: '+=' + figureW + 'px' }, 400, function () {
+        $('#all>figure:last').prependTo('#all');
+        $('#all').css('margin-left', '-' + figureW + 'px');
+      });
+    });
+  
+    $('#gallery .next').on('click', function (e) {
+      $('#all').animate({ marginLeft: '-' + 2 * figureW + 'px' }, 400, function () {
+        $('#all figure:first').appendTo('#all');
+        $('#all').css('margin-left', '-' + figureW + 'px');
+      });
+    });
+  }
+  
 
 function message(){
     const message=$('#box05 p>input').on('click',function(e){
@@ -254,9 +252,25 @@ close.onclick=function(){
 }
 
 
+const elements = document.querySelectorAll('.click');
+const checkbox = document.querySelector('.click:first-child');
 
-/////////////////////////box04 ul hover하면 border 나오게하기///////////////////////////
 
+elements.forEach(function(element){
+  element.addEventListener('click', function() {
+    elements.forEach(function(el) {
+      el.classList.remove('clicked');
+    });
+    element.classList.add('clicked');
+  });
+});
+
+// <aside> 내부의 <a> 요소를 찾아 클릭 이벤트 리스너를 추가합니다.
+const asideLink = document.querySelector('aside.as a');
+asideLink.addEventListener('click', function(event) {
+  event.preventDefault();
+  checkbox.click();
+});
 
 
 function a(){

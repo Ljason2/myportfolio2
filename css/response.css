@@ -819,10 +819,14 @@ border-radius: 50%;
 margin-bottom: 14px;
 box-shadow: 1px 1px 3px #fff;
 text-indent: -99999px;
-
 }
 
 
+
+
+aside>ul>li>.clicked{
+    background-color: #4F46E5;
+}
 
 
 /* footer */
