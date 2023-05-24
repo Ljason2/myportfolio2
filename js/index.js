@@ -254,7 +254,7 @@ close.onclick=function(){
 
 const elements = document.querySelectorAll('.click');
 const checkbox = document.querySelector('.click:first-child');
-
+const checkbox2 = elements[1];
 
 elements.forEach(function(element){
   element.addEventListener('click', function() {
@@ -262,6 +262,7 @@ elements.forEach(function(element){
       el.classList.remove('clicked');
     });
     element.classList.add('clicked');
+    
   });
 });
 
@@ -273,47 +274,37 @@ asideLink.addEventListener('click', function(event) {
 });
 
 
+const asideLink2 = document.querySelector('h1.h11 a');
+asideLink2.addEventListener('click', function(event) {
+  event.preventDefault();
+  checkbox.click();
+  
+});
+
+
+
+// <h3> 내부의 첫 번째 <a> 요소를 찾아 클릭 이벤트 리스너를 추가합니다.
+const h3Link = document.querySelector('#box01 h3 a');
+h3Link.addEventListener('click', function(event) {
+  event.preventDefault();
+  checkbox2.click();
+});
+
+const menuItems = document.querySelectorAll('header nav ul li a');
+
+menuItems.forEach(function(menuItem, index) {
+  menuItem.addEventListener('click', function(event) {
+    event.preventDefault();
+    elements.forEach(function(el) {
+      el.classList.remove('clicked');
+    });
+    elements[index].classList.add('clicked');
+    elements[index].checked = true;
+  });
+});
+
+
 function a(){
-
-
-
-// 의미 없는 코드
-// $('.html>a').hover(function(){
-//     $('#all .article1').css('border','1px solid black')
-//     $('#all .article2').css('border','1px solid black')
-//     $('#all .article3').css('border','1px solid black')
-//     console.log('hi')
-// },function(){
-//     $('#all>figure').css('border','none')
-// }
-
-// )
-
-// $('.javascript>a').hover(function(){
-//     $('#all .article4').css('border','1px solid black')
-
-// },function(){
-//     $('#all>figure').css('border','none')
-
-// })
-
-
-// $('.jquery>a').hover(function(){
-//     $('#all .article5').css('border','1px solid black')
-
-// },function(){
-//     $('#all>figure').css('border','none')
-
-// })
-
-
-// $('.react>a').hover(function(){
-//     $('#all .article6').css('border','1px solid black')
-
-// },function(){
-//     $('#all>figure').css('border','none')
-
-// })
 
 
 
