@@ -290,6 +290,15 @@ h3Link.addEventListener('click', function(event) {
   checkbox2.click();
 });
 
+
+const hearme = document.querySelector('#box02 p a');
+hearme.addEventListener('click', function(event) {
+  event.preventDefault();
+  checkbox.click();
+});
+
+
+
 const menuItems = document.querySelectorAll('header nav ul li a');
 
 menuItems.forEach(function(menuItem, index) {
