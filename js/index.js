@@ -54,16 +54,17 @@ window.location.reload();
 //
 })
 
+
 //  web nav
 function nav(){
-
-$('nav li>a').on('click',function(e){
-    const navA=$(this).attr('href');
-    const aPos= $(navA).offset().top ;
+  $('nav li>a').on('click',function(e){
+    e.preventDefault(); // 기본 앵커 동작을 방지
+    const navA = $(this).attr('href');
     const headerHeight =$('header').innerHeight();
-    $('html,body').animate({scrollTop:aPos - headerHeight},800);
+    const aPos = $(navA).offset().top - headerHeight + 1; // 헤더 높이에서 3px 더 빼줌
+    $('html,body').animate({scrollTop: aPos}, 800);
     return false;
-})
+  });
 }
 
 //  rightgo
@@ -122,7 +123,7 @@ $('aside li>a').on('click',function(e){
 const asideA=$(this).attr('href');
 const asidePos=$(asideA).offset().top;
 const headerHeight=$('header').innerHeight();
-$('html,body').animate({scrollTop:asidePos- headerHeight},800);
+$('html,body').animate({scrollTop:asidePos- headerHeight + 1},800);
 return false;
 })
 }
@@ -256,15 +257,6 @@ const elements = document.querySelectorAll('.click');
 const checkbox = document.querySelector('.click:first-child');
 const checkbox2 = elements[1];
 
-elements.forEach(function(element){
-  element.addEventListener('click', function() {
-    elements.forEach(function(el) {
-      el.classList.remove('clicked');
-    });
-    element.classList.add('clicked');
-    
-  });
-});
 
 // <aside> 내부의 <a> 요소를 찾아 클릭 이벤트 리스너를 추가합니다.
 const asideLink = document.querySelector('aside.as a');
@@ -299,18 +291,30 @@ hearme.addEventListener('click', function(event) {
 
 
 
-const menuItems = document.querySelectorAll('header nav ul li a');
-
-menuItems.forEach(function(menuItem, index) {
-  menuItem.addEventListener('click', function(event) {
-    event.preventDefault();
-    elements.forEach(function(el) {
-      el.classList.remove('clicked');
-    });
-    elements[index].classList.add('clicked');
-    elements[index].checked = true;
-  });
+window.addEventListener('scroll', function() {
+    // 각 요소의 위치를 확인하고 불을 켜는 함수를 실행합니다.
+    elements.forEach(checkIfInView);
 });
+
+function checkIfInView(element, index) {
+    const box = document.querySelector(element.getAttribute('href'));  // href 속성을 이용하여 대상 요소 선택
+    const headerHeight = document.querySelector('header').offsetHeight;  // 헤더의 높이를 가져옵니다.
+    const boxOffsetTop = box.offsetTop - headerHeight ;  // 헤더 높이를 고려하여 요소의 페이지 상의 위치를 얻습니다.
+
+    // 스크롤이 요소의 위치를 지났는지 확인합니다.
+    if (window.pageYOffset >= boxOffsetTop && window.pageYOffset < (boxOffsetTop + box.offsetHeight)) {
+        // 스크롤이 요소의 위치를 지났으면 불을 켭니다.
+        elements.forEach(function(el) {
+            el.classList.remove('clicked');
+        });
+        element.classList.add('clicked');
+    } else {
+        // 스크롤이 요소의 위치를 지나지 않았으면 불을 끕니다.
+        element.classList.remove('clicked');
+    }
+}
+
+
 
 
 function a(){
